@@ -1,4 +1,4 @@
-package main.com.youkeda;
+package main.com.Algorithm;
 
 import java.util.Arrays;
 
