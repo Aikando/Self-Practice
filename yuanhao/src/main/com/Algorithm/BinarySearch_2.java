@@ -2,7 +2,7 @@ package main.com.Algorithm;
 import java.util.ArrayList;
 
 
-public class BubbleSearch_2 {
+public class BinarySearch_2 {
 
         public static int find(ArrayList<String> array, String aim) {
             int left = 0;

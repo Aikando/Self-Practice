@@ -1,6 +1,6 @@
 package main.com.Algorithm;
 
-public class BinarySearch {
+public class BinarySearch_1 {
 
 
 

@@ -1,15 +1,41 @@
-package main;
-
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-
 public class Demo {
+
+    // 判断括号是否匹配
+    public static boolean isBracketMatch(String content) {
+        int parenthesis = 0;
+        int braces = 0;
+        for (int i = 0; i < content.length(); i++) {
+            if (content.charAt(i) == 40){
+                parenthesis++;
+            }
+            if(content.charAt(i) == 41){
+                parenthesis--;
+                if (parenthesis < 0){
+                    return false;
+                }
+            }
+            if (content.charAt(i) == 123){
+                braces++;
+            }
+            if (content.charAt(i) == 125){
+                if (braces < 0){
+                    return false;
+                }
+                braces--;
+            }
+        }
+
+        return parenthesis == 0 && braces == 0;
+    }
+
+
     public static void main(String[] args) {
+        System.out.println(isBracketMatch("public void run(int a){if(a == 1){System.out.println(a)}}"));
+        System.out.println(isBracketMatch("public void run(int a){if(a == 1)System.out.println(a)}}"));
+
+    }
+}
+
 
 //        for (int i = 1;i <= 9;i++){
 //            for (int j = 1; j <=i;j++){
@@ -63,24 +89,24 @@ public class Demo {
 //        System.out.println(time);
 
 
-        List<String> st = new ArrayList<>();
+//        List<String> st = new ArrayList<>();
+//
+//        st.add("123");
+//        st.add("abc");
+//
+//        System.out.println(st.size());
+//
+//        String st1 = st.get(0);
+//
+//        st.remove(st.size()-1);
+//        System.out.println(st.size());
+//
+//        st.clear();
+//        System.out.println(st.size());
+//
+//
+//    }
 
-        st.add("123");
-        st.add("abc");
-
-        System.out.println(st.size());
-
-        String st1 = st.get(0);
-
-        st.remove(st.size()-1);
-        System.out.println(st.size());
-
-        st.clear();
-        System.out.println(st.size());
 
 
-    }
-
-
-
-}
+//}
