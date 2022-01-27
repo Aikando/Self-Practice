@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class SelectSort {
 
-    // 升序
+    // ascending
     public static void selectSortUp(int[] array) {
 
         int length = array.length;
@@ -24,7 +24,7 @@ public class SelectSort {
         }
 
     }
-    //降序排列
+    // Descending
     public static void selectSortDown(int[] array){
         for (int i = 0; i < array.length; i++) {
             int maxIndex = i;
